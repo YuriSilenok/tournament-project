@@ -9,6 +9,25 @@ class Tournament(models.Model):
     class Meta:
         verbose_name = "Турнир"
         verbose_name_plural = "Турниры"
+    def __str__(self):
+        return self.name
 
+
+class Category(models.Model):
+    name = models.TextField('Category')
+    
+    class Meta:
+        verbose_name = "Категория"
+        verbose_name_plural = "Категории"
+    def __str__(self):
+        return self.name
+
+
+class Nomination(models.Model):
+    name = models.CharField('Nomination', max_length=100)
+    
+    class Meta:
+        verbose_name = "Номинация"
+        verbose_name_plural = "Номинации"
     def __str__(self):
         return self.name
