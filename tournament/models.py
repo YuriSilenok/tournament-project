@@ -40,8 +40,8 @@ class Human(models.Model):
     surname = models.CharField('Surname', max_length = 50)
     name = models.CharField('Name', max_length = 50)
     patronymic = models.CharField('Patronymic', max_length = 50)
-    year_of_birth = models.CharField('Year', max_length = 4)
-    gender = models.CharField("Gender", max_length = 50)
+    year_of_birth = models.DateField('Year')
+    gender = models.BinaryField("Gender")
     
     class Meta:
     
@@ -53,19 +53,22 @@ class Human(models.Model):
         verbose_year_of_birth = "Год рождения"
         verbose_gender = "Пол"
     
-    def __str__(self, value):
+    def __str__(self, a):
        
-        if value == "surname":
+        if a == "surname":
             return self.surname
 
-        elif value == "name":
+        elif a == "name":
             return self.name
 
-        elif value == "patronymic":
+        elif a == "patronymic":
             return self.patronymic
 
-        elif value == "year_of_birth":
+        elif a == "year_of_birth":
             return self.year_of_birth
 
-        else:
+        elif a == "gender":
             return self.gender
+        else:
+            pass
+
