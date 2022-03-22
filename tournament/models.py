@@ -37,38 +37,51 @@ class Nomination(models.Model):
 
 
 class Human(models.Model):
-    surname = models.CharField('Surname', max_length = 50)
-    name = models.CharField('Name', max_length = 50)
-    patronymic = models.CharField('Patronymic', max_length = 50)
-    year_of_birth = models.DateField('Year')
-    gender = models.BinaryField("Gender")
-    
-    class Meta:
-    
-        verbose_surname = "Фамилия"
-        verbose_name_plural_surname = "Фамилии"
-        verbose_name = "Имя"
-        verbose_name_plural = "Имена"
-        verbose_patronymic = "Отчество"
-        verbose_year_of_birth = "Год рождения"
-        verbose_gender = "Пол"
-    
-    def __str__(self, a):
-       
-        if a == "surname":
-            return self.surname
 
-        elif a == "name":
+    class Surname:
+        surname = models.CharField('Surname', max_length = 50)
+
+        class Meta:
+            verbose_name = "Фамилия"
+            verbose_name_plural = "Фамилии"
+
+        def __str__(self):
+            return self.surname
+    
+    class Name:
+        name = models.CharField('Name', max_length = 50)
+
+        class Meta:
+            verbose_name = "Имя"
+            verbose_name_plural = "Имена"
+
+        def __str__(self):
             return self.name
 
-        elif a == "patronymic":
+    class Patronymic:
+        patronymic = models.CharField('Patronymic', max_length = 50)
+
+        class Meta:
+            verbose_name = "Отчество"
+
+        def __str__(self):
             return self.patronymic
 
-        elif a == "year_of_birth":
-            return self.year_of_birth
+    class Year:
+        year = models.IntegerField('Year')
 
-        elif a == "gender":
+        class Meta:
+            verbose_name = "Год"
+
+        def __str__(self):
+            return self.year
+
+    class Gender:
+        gender = models.BinaryField("Gender")
+
+        class Meta:
+            verbose_name = "Пол"
+
+        def __str__(self):
             return self.gender
-        else:
-            pass
 
