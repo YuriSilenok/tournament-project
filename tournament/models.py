@@ -37,51 +37,16 @@ class Nomination(models.Model):
 
 
 class Human(models.Model):
+    name = models.CharField('Name', max_length = 50)
+    surname = models.CharField('Surname', max_length = 50)
+    patronymic = models.CharField('Patronymic', max_length = 50)
+    year = models.IntegerField('Year')
+    gender = models.BinaryField("Gender")
 
-    class Surname:
-        surname = models.CharField('Surname', max_length = 50)
+    class Meta:
+        verbose_name = "Участник"
+        verbose_name_plural = "Участники"
 
-        class Meta:
-            verbose_name = "Фамилия"
-            verbose_name_plural = "Фамилии"
-
-        def __str__(self):
-            return self.surname
-    
-    class Name:
-        name = models.CharField('Name', max_length = 50)
-
-        class Meta:
-            verbose_name = "Имя"
-            verbose_name_plural = "Имена"
-
-        def __str__(self):
-            return self.name
-
-    class Patronymic:
-        patronymic = models.CharField('Patronymic', max_length = 50)
-
-        class Meta:
-            verbose_name = "Отчество"
-
-        def __str__(self):
-            return self.patronymic
-
-    class Year:
-        year = models.IntegerField('Year')
-
-        class Meta:
-            verbose_name = "Год"
-
-        def __str__(self):
-            return self.year
-
-    class Gender:
-        gender = models.BinaryField("Gender")
-
-        class Meta:
-            verbose_name = "Пол"
-
-        def __str__(self):
-            return self.gender
+    def __str__(self):
+        return self.name
 
