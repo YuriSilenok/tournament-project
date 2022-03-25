@@ -1,3 +1,8 @@
-from django.shortcuts import render
+from rest_framework import viewsets
 
-# Create your views here.
+from .serialazer import TournamentSerializer
+from .models import Tournament
+
+class TournamentViewSet(viewsets.ModelViewSet):
+    queryset = Tournament.objects.all().order_by('name')
+    serializer_class = TournamentSerializer
