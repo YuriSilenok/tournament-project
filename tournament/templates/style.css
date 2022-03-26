@@ -1,0 +1,13 @@
+.col-8
+{
+	border: 1px solid;
+}
+.col-4, .col-12
+{
+	border: 1px solid;
+}
+#scrollbar
+{
+	height: 10%;
+	overflow: auto;
+}
