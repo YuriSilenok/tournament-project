@@ -37,9 +37,9 @@ class Nomination(models.Model):
 
 
 class Human(models.Model):
-    name = models.CharField('Name', max_length = 50)
-    surname = models.CharField('Surname', max_length = 50)
-    patronymic = models.CharField('Patronymic', max_length = 50)
+    name = models.TextField('Name')
+    surname = models.TextField('Surname')
+    patronymic = models.TextField('Patronymic')
     year = models.IntegerField('Year')
     gender = models.BinaryField("Gender")
 
