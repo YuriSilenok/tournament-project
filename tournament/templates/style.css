@@ -1,14 +1,47 @@
-.col-8
+@font-face
 {
-	border: 1px solid;
+	font-family: "Molot"
+	src: url("/fonts/Molot.otf");
 }
-.col-4, .col-12
+
+::-webkit-scrollbar-thumb {
+    background-color: #f9ac64;
+    border-radius: 3px;
+}
+::-webkit-scrollbar {
+    width: 10px; /* ширина для вертикального скролла */
+    height: 10px; /* высота для горизонтального скролла */
+    background-color: auto;
+}
+
+span, #new_tournament
 {
-	border: 1px solid;
+	color: #808c6d;
+	font-family: "Molot";
 }
+
+#new_tournament
+{
+	width: 250px;
+	border: 3px solid;
+	border-color: #f9ac64;
+	border-radius: 5px;
+}
+
+#input_name_tournament
+{
+	width: 250px;
+	border: 3px solid;
+	border-color: #f9ac64;
+	border-radius: 5px;
+	outline: none;
+}
+
+
+
 #scrollbar
 {
-	height: 500px;
+	height: 448px;
 	overflow: auto;
 }
 .row
@@ -18,4 +51,77 @@
 .body
 {
 	height: 100%;
+}
+
+.max-width, .row, 
+{
+	border: 1px solid;
+}
+
+#close_panel
+{
+	color: #f9ac64;
+	font-family: "Molot";
+	font-size: 30px;
+}
+
+#button_close_panel
+{
+	border-top: 2px solid;
+	border-bottom: 1px solid;
+	border-left: 2px solid;
+	border-color: #808c6d;
+}
+
+#scrollbar
+{
+	border-left: 2px solid;
+	border-color: #808c6d;
+}
+
+#left_tube
+{
+	border-left: 2px solid;
+	border-top: 1px solid;
+	border-color: #808c6d;
+}
+
+#right_tube
+{
+	border-top: 1px solid;
+	border-color: #808c6d;
+}
+
+#name_tournament
+{
+	border-top: 1px solid;
+	border-color: #808c6d;
+}
+
+#col_input_name
+{
+	border-left: 2px solid;
+	border-color: #808c6d;
+}
+
+#button_new_tournament
+{
+	border-left: 2px solid;
+	border-color: #808c6d;
+}
+
+#history_tournament
+{
+	border-bottom: 2px solid;
+	border-top: 2px solid;
+	border-left: 2px solid;
+	border-color: #808c6d;
+}
+
+#text_close_panel
+{
+	border-bottom: 1px solid;
+	border-top: 2px solid;
+	border-left: 2px solid;
+	border-color: #808c6d;
 }
