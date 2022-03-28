@@ -44,8 +44,8 @@ class Human(models.Model):
     gender = models.BinaryField("Gender")
 
     class Meta:
-        verbose_name = "Участник"
-        verbose_name_plural = "Участники"
+        verbose_name = "Человек"
+        verbose_name_plural = "Чебуреки"
 
     def __str__(self):
         return self.name
