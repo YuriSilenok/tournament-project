@@ -36,7 +36,7 @@ class Nomination(models.Model):
         return self.name
 
 class Club(models.Model):
-    name = models.TextField('Название клуба')
+    name = models.TextField('Название')
     city = models.TextField('Город')
     
     class Meta:
