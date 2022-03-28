@@ -2,9 +2,9 @@ from django.db import models
 
 
 class Tournament(models.Model):
-    name = models.CharField('Tournament name', max_length=75)
-    start_date = models.DateField('Date of start', auto_now=True)
-    completeness = models.BooleanField('Completeness of tournament', default=False)
+    name = models.CharField('Name', max_length=75)
+    start_date = models.DateField('StarDate', auto_now=True)
+    completeness = models.BooleanField('Completed', default=False)
 
     class Meta:
         verbose_name = "Турнир"
@@ -35,9 +35,25 @@ class Nomination(models.Model):
     def __str__(self):
         return self.name
 
+
+class Human(models.Model):
+    name = models.TextField('Name')
+    surname = models.TextField('Surname')
+    patronymic = models.TextField('Patronymic')
+    year = models.IntegerField('Year')
+    gender = models.BinaryField("Gender")
+
+    class Meta:
+        verbose_name = "Человек"
+        verbose_name_plural = "Чебуреки"
+
+    def __str__(self):
+        return self.name
+
+
 class Club(models.Model):
-    name = models.TextField('Название')
-    city = models.TextField('Город')
+    name = models.TextField('Name')
+    city = models.TextField('City')
     
     class Meta:
         verbose_name = "Клуб"
