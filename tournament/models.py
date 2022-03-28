@@ -34,3 +34,14 @@ class Nomination(models.Model):
 
     def __str__(self):
         return self.name
+
+class Club(models.Model):
+    name = models.TextField('Название')
+    city = models.TextField('Город')
+    
+    class Meta:
+        verbose_name = "Клуб"
+        verbose_name_plural = "Клубы"
+
+    def __str__(self):
+        return self.name
