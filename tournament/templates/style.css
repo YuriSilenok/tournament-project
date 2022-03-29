@@ -26,6 +26,7 @@ span, #new_tournament
 	border: 3px solid;
 	border-color: #f9ac64;
 	border-radius: 5px;
+	margin-bottom: 20px;
 }
 
 #input_name_tournament
@@ -34,7 +35,8 @@ span, #new_tournament
 	border: 3px solid;
 	border-color: #f9ac64;
 	border-radius: 5px;
-	outline: none;
+	margin-bottom: 10px;
+
 }
 
 
@@ -77,6 +79,7 @@ span, #new_tournament
 {
 	border-left: 2px solid;
 	border-color: #808c6d;
+	
 }
 
 #left_tube
@@ -124,4 +127,13 @@ span, #new_tournament
 	border-top: 2px solid;
 	border-left: 2px solid;
 	border-color: #808c6d;
+	position: relative;
+
 }
+
+#switch_panel
+{
+	position: absolute;
+	top: 10px;
+}
+

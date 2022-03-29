@@ -30,7 +30,7 @@
       <div class = "row">
       <!-- Первые два столбика - надпись и кнопка закрытия панели -->
         <div class = "col-10" id = "text_close_panel">
-          <span>Свернуть панель</span>
+          <span id = "switch_panel">Свернуть панель</span>
         </div>
         <div class = "col-2" id = "button_close_panel">
           <center><span id = "close_panel">>></span></center>
@@ -40,14 +40,14 @@
       <!-- Две трубы и надпись название турнира -->
       <div class = "row">
         <div class="col-3" id = "left_tube">
-          LT
+          <img src="\pictures\rtube.jpg" width="30px" height="30px" id = "ltube">
         </div>
         <div class = "col-6" id = "name_tournament">
-          <center><span>Название турнира</span></center>
+          <center><span id = "name_tr">Название турнира</span></center>
         <br>
         </div>
         <div class = "col-3" id = "right_tube">
-            RT
+            <img src="\pictures\ltube.jpg" width="30px" height="30px" id = "rtube">
         </div>
       </div>
 
@@ -56,7 +56,7 @@
       <!-- Ячейка под input -->
       <div class = "row">
         <div class = "col" id = "col_input_name">
-          <center><input type="text" name="inputnametournament" id = "input_name_tournament"></center><br>
+          <center><input type="text" name="inputnametournament" id = "input_name_tournament"></center>
         </div>
       </div>
 
@@ -81,19 +81,27 @@
       <div class="col" id="scrollbar">
         <center><table>
         <tr>
-          <td></td>
+          <td>
+            <img src="\pictures\swords.jpg" width="25px" height="25px" class = "swords">
+          </td>
           <td><span>Турнир 20.01.2022</span><br></td>
         </tr>
         <tr>
-          <td></td>
+          <td>
+            <img src="\pictures\swords.jpg" width="25px" height="25px" class = "swords">
+          </td>
           <td><span>Турнир 20.01.2022</span><br></td>
         </tr>
         <tr>
-          <td></td>
+          <td>
+            <img src="\pictures\flag.jpg" width="25px" height="25px" class = "flag">
+          </td>
           <td><span>Турнир 20.01.2022</span><br></td>
         </tr>
         <tr>
-          <td></td>
+          <td>
+            <img src="\pictures\flag.jpg" width="25px" height="25px" class = "flag">
+          </td>
           <td><span>Турнир 20.01.2022</span><br></td>
         </tr>
         <tr>
