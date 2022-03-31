@@ -71,3 +71,10 @@ class Participant(models.Model):
     seeding = models.IntegerField('Посевной')
     overall_rating = models.IntegerField('Общий рейтинг')
 
+    class Meta:
+        verbose_name = "Участник"
+        verbose_name_plural = "Участники"
+
+    def __str__(self):
+        return self.name
+
