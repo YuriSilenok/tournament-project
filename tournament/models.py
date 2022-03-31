@@ -61,3 +61,13 @@ class Club(models.Model):
 
     def __str__(self):
         return self.name
+
+class Participant(models.Model):
+    tournament = models.ForeignKey(Tournament, on_delete=models.CASCADE)
+    human = models.ForeignKey(Human, on_delete=models.CASCADE)
+    nickname = models.TextField('Псевдоним')
+    height = models.IntegerField('Рост')
+    weight = models.IntegerField('Вес')
+    seeding = models.IntegerField('Посевной')
+    overall_rating = models.IntegerField('Общий рейтинг')
+
