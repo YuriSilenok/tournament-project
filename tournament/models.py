@@ -1,3 +1,4 @@
+from unicodedata import category
 from django.db import models
 
 
@@ -61,3 +62,15 @@ class Club(models.Model):
 
     def __str__(self):
         return self.name
+
+class Participant_category(models.Model):
+    category = models.ForeignKey(
+        Category)
+    participant = models.ForeignKey(
+        Participant, on_delete=models.CASCADE)
+    class Meta:
+        verbose_name = "Участник-Категория"
+        verbose_name_plural = "Участники-Категории"
+    
+    def __str__(self):
+        return self.category
