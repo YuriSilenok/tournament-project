@@ -61,3 +61,14 @@ class Club(models.Model):
 
     def __str__(self):
         return self.name
+
+class Participant_Category_Nomination(models.Model):
+    participant_category = models.ForeignKey(Participant_category, on_delete=models.CASCADE) #Прошу назвать модель Участник-Категория: Participant_category
+    nomination = models.ForeignKey(Nomination, on_delete=models.CASCADE)
+
+    class Meta:
+        verbose_name = "Участник-Категория-Номинация"
+        verbose_name_plural = "Участники-Категории-Номинации"
+
+    def __str__(self):
+        return self.name
